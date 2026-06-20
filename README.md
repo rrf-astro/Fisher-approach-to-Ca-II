@@ -22,34 +22,7 @@ marginalisation penalty of 3/2 in variance when chromospheric line width is a
 nuisance parameter, and minimum observation counts N_min = 29 (ESPRESSO deep) vs.
 ~225,000 (LAMOST LRS) to reach a 1% precision target.
 
----
 
-## Repository structure
-
-```
-Fisher-aproach-to-Ca-II/
-├── manuscript/
-│   ├── manuscript_v1_5.tex       # Main LaTeX source (RAA format)
-│   └── reference.bib             # BibTeX bibliography (39 entries)
-├── notebooks/
-│   └── fisher_caII_analysis.ipynb  # Analysis notebook v2.0 (45 cells)
-├── figs/
-│   ├── fig01_spectral_model.eps
-│   ├── fig02_crb_sindex_map.eps
-│   ├── fig03_fisher_offdiag.eps
-│   ├── fig04_crb_rhk_degrad.eps
-│   ├── fig05_survey_efficiency.eps
-│   └── fig06_lamost_likelihood.eps
-├── state/
-│   ├── PAPER_STATE_v15.md
-│   ├── REVISION_LOG_v15.md
-│   ├── EQUATIONS_LOG.md
-│   ├── FIGURE_LOG_v4.md
-│   ├── CODE_LOG_v8.md
-│   └── DATA_LOG.md
-├── .gitignore
-└── README.md
-```
 
 ---
 
@@ -61,7 +34,7 @@ notebook. Execute cells sequentially from top to bottom (do not skip cells).
 **Requirements:** Python 3.x, numpy, scipy, matplotlib, sympy
 
 ```bash
-cd notebooks/
+
 jupyter notebook fisher_caII_analysis.ipynb
 # Kernel → Restart & Run All
 ```
