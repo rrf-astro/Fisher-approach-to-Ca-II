@@ -1,0 +1,68 @@
+# ─── LaTeX ────────────────────────────────────────────────────────────────────
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.nav
+*.snm
+*.vrb
+*.run.xml
+*-blx.bib
+*.bcf
+
+# ─── Python / Jupyter ─────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+env/
+venv/
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.nfs*
+
+# ─── Editors ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# ─── Figures (PNG previews kept; EPS are the tracked publication files) ───────
+# Uncomment the line below if you prefer not to track PNG previews:
+# figs/*.png
+
+# ─── Misc ─────────────────────────────────────────────────────────────────────
+*.pdf
+# (keep reference.bib tracked; exclude auto-generated PDFs)
