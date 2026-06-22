@@ -1,90 +1,71 @@
-# Fundamental precision limits for chromospheric activity indicators: a Fisher information approach to Ca II H&K spectroscopy
+# Fisher approach to Ca II H&K chromospheric activity indicators
 
-**Ferreira et al. 2026** — *Research in Astronomy and Astrophysics* (submitted)
+**Ferreira, R.R. & Borin, A.M.S.**  
+Federal Institute of Triângulo Mineiro (IFTM), Uberaba-MG, Brazil
 
 ---
 
 ## Overview
 
-This repository contains the manuscript, analysis notebook, and figures for a
-theoretical study of the fundamental measurement precision limits for chromospheric
-activity indicators derived from the Ca II H&K doublet (S-index S_HK and
-log R'_HK).
+This repository contains the analysis code and manuscript source for the paper:
 
-A parametric spectral model for the Ca II H&K region is developed, treating the
-observed flux as a superposition of a broad photospheric trough and a narrow
-chromospheric emission core. The Fisher information framework is applied to derive
-closed-form Cramér–Rao lower bounds (CRB) on the precision of S_HK and R'_HK as
-functions of signal-to-noise ratio (SNR), spectral resolution (R), and stellar type.
-Key results include the CRB scaling σ_CRB(S_HK) ∝ SNR⁻¹ R⁻¹/², a universal
-Fisher correlation ρ(A_C, σ_C) = +1/√3 independent of stellar parameters, an exact
-marginalisation penalty of 3/2 in variance when chromospheric line width is a
-nuisance parameter, and minimum observation counts N_min = 29 (ESPRESSO deep) vs.
-~225,000 (LAMOST LRS) to reach a 1% precision target.
+> *Parametric precision limits for Ca II H&K chromospheric activity indicators: a Fisher-information approach*  
+> Submitted to Research in Astronomy and Astrophysics (RAA)
 
+The paper derives Cramér-Rao bounds on the measurement precision of the chromospheric S-index S_HK and the normalized excess R'_HK using the Fisher information framework applied to a parametric spectral model for the Ca II H&K doublet.
 
+---
+
+## Contents
+
+| File | Description |
+|---|---|
+| `main.tex` | Manuscript source (RAA format) |
+| `cover_letter.tex` | Cover letter for submission |
+| `reference.bib` | BibTeX bibliography (39 entries) |
+| `fisher_caII_analysis.ipynb` | Analysis notebook — generates all figures and numerical results |
+| `requirements.txt` | Python dependencies |
+| `state/` | Versioned session state files (CRAFT PRO MAX workflow) |
 
 ---
 
 ## Reproducing the results
 
-All numerical results and figures are generated exclusively through the Jupyter
-notebook. Execute cells sequentially from top to bottom (do not skip cells).
+### Requirements
 
-**Requirements:** Python 3.x, numpy, scipy, matplotlib, sympy
+Python 3.10+ with the packages listed in `requirements.txt`:
 
 ```bash
-
-jupyter notebook fisher_caII_analysis.ipynb
-# Kernel → Restart & Run All
+pip install -r requirements.txt
 ```
 
-All six figures are written to `figs/` as both `.png` (preview) and `.eps`
-(publication quality). Do not run figures from any external script — the notebook
-is the single source of truth for all numerical output.
+### Running the notebook
+
+```bash
+jupyter notebook fisher_caII_analysis.ipynb
+```
+
+Execute all cells sequentially (cells 1–45). The notebook produces all six manuscript figures and verifies the key numerical results:
+
+- σ_CRB(S_HK)|4×4 = 0.1800 × (100/SNR) × √(50 000/R)
+- ρ(A_C, σ_C) = +1/√3 (universal, parameter-independent)
+- p_{σ_C} = 3/2 (exact marginalisation penalty)
+- N_min = 29 (ESPRESSO deep) to >2×10⁵ (LAMOST LRS)
 
 ---
 
 ## Key results
 
-| Result | Value |
-|---|---|
-| σ_CRB(S_HK) \| 4×4 Fisher | 0.1800 × (100/SNR) × √(50k/R) |
-| Fisher correlation ρ(A_C, σ_C) | +1/√3 ≈ 0.5774 (universal) |
-| Marginalisation penalty p_{σ_C} | 3/2 (exact) |
-| Passband dilution ΔW_RV / I_WG | 42.19 (solar) |
-| N_min — ESPRESSO deep | 29 |
-| N_min — LAMOST LRS | ~225,000 |
-| F_core (solar) | 0.08 |
-
----
-
-## How to cite
-
-If you use this work, please cite:
-
-```
-Ferreira et al. 2026, Research in Astronomy and Astrophysics, [vol], [page]
-DOI: [to be assigned upon publication]
-```
-
-BibTeX entry (placeholder — update after publication):
-
-```bibtex
-@ARTICLE{Ferreira2026,
-   author  = {Ferreira, [First name] and [co-authors]},
-   title   = {Fundamental precision limits for chromospheric activity indicators:
-              a Fisher information approach to {Ca\,{\sc ii}} H\&K spectroscopy},
-   journal = {Research in Astronomy and Astrophysics},
-   year    = {2026},
-   volume  = {},
-   pages   = {},
-   doi     = {}
-}
-```
+The parametric Cramér-Rao bound on S_HK scales as SNR⁻¹ R⁻¹/², with a passband dilution prefactor ΔW_RV/I_WG ≈ 42.19. A universal Fisher correlation ρ(A_C, σ_C) = +1/√3, independent of all stellar and instrumental parameters, implies an exact marginalisation penalty of 3/2 in variance when the chromospheric line width is treated as a nuisance parameter.
 
 ---
 
 ## License
 
-To be confirmed by the authors prior to publication.
+Code: MIT License. Manuscript text: © the authors.
+
+---
+
+## Contact
+
+R.R. Ferreira — rafaelferreira@iftm.edu.br
