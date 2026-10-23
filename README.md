@@ -1,7 +1,7 @@
 # Fisher approach to Ca II H&K chromospheric activity indicators
 
-**Ferreira, R.R. & Borin, A.M.S.**  
-Federal Institute of Triângulo Mineiro (IFTM), Uberaba-MG, Brazil
+**Ferreira, R.R., J. Gomes da Silva, D. Wittman & Borin, A.M.S.**  
+
 
 ---
 
